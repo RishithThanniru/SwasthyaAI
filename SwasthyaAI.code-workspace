@@ -1,0 +1,61 @@
+{
+  "folders": [
+    { "name": "SwasthyaAI Root", "path": "." },
+    { "name": "Backend (Python/FastAPI)", "path": "backend" },
+    { "name": "Frontend (React)", "path": "frontend" }
+  ],
+  "settings": {
+    "editor.fontSize": 14,
+    "editor.formatOnSave": true,
+    "python.defaultInterpreterPath": "python",
+    "editor.tabSize": 2,
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/__pycache__": true,
+      "**/.git": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "bradlc.vscode-tailwindcss",
+      "ms-vscode.live-server"
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "FastAPI Backend",
+        "type": "python",
+        "request": "launch",
+        "module": "uvicorn",
+        "args": ["main:app", "--reload", "--port", "8000"],
+        "cwd": "${workspaceFolder}/backend",
+        "jinja": true
+      }
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Start Backend",
+        "type": "shell",
+        "command": "cd backend && python main.py",
+        "group": "build",
+        "presentation": { "panel": "new", "name": "Backend" }
+      },
+      {
+        "label": "Start Frontend",
+        "type": "shell",
+        "command": "cd frontend && npm start",
+        "group": "build",
+        "presentation": { "panel": "new", "name": "Frontend" }
+      }
+    ]
+  }
+}
