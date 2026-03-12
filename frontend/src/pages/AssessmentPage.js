@@ -96,7 +96,7 @@ export default function AssessmentPage() {
         blood_sugar_fasting: formData.blood_sugar_fasting ? parseFloat(formData.blood_sugar_fasting) : null,
         bmi: formData.bmi ? parseFloat(formData.bmi) : null,
       };
-      const response = await axios.post('http://localhost:8000/api/predict/', payload);
+      const response = await axios.post('https://swasthyaai.onrender.com/api/predict/', payload);
       localStorage.setItem('swasthya_result', JSON.stringify(response.data));
       localStorage.setItem('swasthya_lang', formData.language);
       navigate('/results');
