@@ -48,16 +48,7 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section style={{ padding: '80px 24px 60px', textAlign: 'center', maxWidth: 900, margin: '0 auto' }}>
         
-        {/* Badge */}
-        <div className="animate-in" style={{
-          display: 'inline-flex', alignItems: 'center', gap: 8,
-          background: 'rgba(0,255,135,0.08)', border: '1px solid rgba(0,255,135,0.25)',
-          borderRadius: 100, padding: '6px 18px', marginBottom: 32,
-          fontSize: 12, fontWeight: 600, color: '#00ff87', letterSpacing: 1
-        }}>
-          <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#00ff87', display: 'inline-block' }}></span>
-          HACKATHON 2024 · BUILT FOR RURAL BHARAT
-        </div>
+       
 
         {/* Main Heading */}
         <h1 className="animate-in" style={{
